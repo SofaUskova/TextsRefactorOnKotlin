@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">TextOnKotlin</string>
+    <string name="create_file">Создать файл</string>
+    <string name="settings">Настройки</string>
+    <string name="refactor_file">Редактировать файл</string>
+    <string name="show_file">Просмотреть файл</string>
+    <string name="small">Маленький</string>
+    <string name="middle">Средний</string>
+    <string name="big">Большой</string>
+    <string name="black">Черный</string>
+    <string name="pink">Розовый</string>
+    <string name="blue">Голубой</string>
+    <string name="preview">Предпросмотр</string>
 </resources>

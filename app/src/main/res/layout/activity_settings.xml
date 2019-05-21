@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:gravity="center">
+
+    <RadioGroup
+            android:id="@+id/textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+                android:text="@string/small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sizeTextSmall"/>
+
+        <RadioButton
+                android:text="@string/middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sizeTextMiddle"/>
+
+        <RadioButton
+                android:text="@string/big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sizeTextBig"/>
+    </RadioGroup>
+
+    <RadioGroup
+            android:id="@+id/textColor"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+                android:text="@string/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/colorTextBlack"/>
+
+        <RadioButton
+                android:text="@string/pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/colorTextPink"/>
+
+        <RadioButton
+                android:text="@string/blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/colorTextBlue"/>
+    </RadioGroup>
+
+    <TextView
+            android:layout_marginTop="40dp"
+            android:text="@string/preview"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"/>
+
+</LinearLayout>

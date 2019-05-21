@@ -11,13 +11,13 @@
 
 
     <Button
-            android:text="Создать файл"
+            android:text="@string/create_file"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
             android:id="@+id/createFile"/>
     <Button
-            android:text="Настройки"
+            android:text="@string/settings"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/createFile"
             android:layout_width="match_parent"

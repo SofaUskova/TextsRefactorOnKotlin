@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity() {
             setContentView(R.layout.activity_open_file)
             openFile.setOnClickListener(this::onClickRead)
             refactorFile.setOnClickListener(this::onClickRefactor)
+            settingsOpen.setOnClickListener(this::onClickSettings)
         } else {
             setContentView(R.layout.activity_main)
             createFile.setOnClickListener(this::onClickCreate)
+            settings.setOnClickListener(this::onClickSettings)
         }
 
     }
@@ -43,6 +45,13 @@ class MainActivity : AppCompatActivity() {
     private fun onClickRefactor(v: View) {
         startActivity(
             Intent(this, RefactorFileActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        )
+    }
+
+    private fun onClickSettings(v: View) {
+        startActivity(
+            Intent(this, SettingsActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         )
     }
