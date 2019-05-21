@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_settings.*
 class SettingsActivity : AppCompatActivity() {
     private lateinit var mSettings: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
+    private var textColorSave: Int = 0
+    private var textSizeSave: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,28 +32,26 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun onClickTextSize(v: View) {
-        val textSizeSave = when (v.id) {
+        textSizeSave = when (v.id) {
             R.id.sizeTextSmall -> {
                 textView.textSize = 10F
-                10F
+                10
             }
             R.id.sizeTextMiddle -> {
                 textView.textSize = 20F
-                20F
+                20
             }
             R.id.sizeTextBig -> {
                 textView.textSize = 30F
-                30F
+                30
             }
             else ->
-                20F
+                20
         }
-        editor.putInt("TEXT_SIZE", textSizeSave.toInt())
-        editor.apply()
     }
 
     private fun onClickTextColor(v: View) {
-        val textColorSave = when (v.id) {
+        textColorSave = when (v.id) {
             R.id.colorTextBlack -> {
                 textView.setTextColor(Color.parseColor("#021c0a"))
                 Color.parseColor("#021c0a")
@@ -67,6 +67,12 @@ class SettingsActivity : AppCompatActivity() {
             else ->
                 Color.parseColor("#021c0a")
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        editor.putInt("TEXT_SIZE", textSizeSave.toInt())
+        editor.apply()
         editor.putInt("TEXT_COLOR", textColorSave)
         editor.apply()
     }
